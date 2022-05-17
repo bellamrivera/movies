@@ -137,14 +137,17 @@ function getCategories() {
   return result;
 }
 
-function getJokes(category) {
-  let number = 0;
-  if (category === 'funnyJoke') {
-    number = funnyJoke.length;
-    return funnyJoke[Math.floor(Math.random() * number)];
-  } else {
-    number = lameJoke.length;
-    return lameJoke[Math.floor(Math.random() * number)];
+function getQuizzes(category) {
+  if (category === 'Disney') {
+    return disney;
+  } else if (category === 'Personality') {
+    return personality;
+  } else if (category === 'Harry Potter') {
+  return harryPotter;
+  } else if (category === 'Food') {
+  return food;
+  } else if (category === 'Trivia') {
+  return trivia;
   }
 }
 
