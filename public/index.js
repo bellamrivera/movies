@@ -13,7 +13,8 @@
 
   function getCategory() {
     let btnId = this.id;
-    let url = '/quizzes/list/' + btnId;
+    console.log(btnId);
+    let url = '/movies/list/' + btnId;
     fetch(url)
       .then(statusCheck)
       .then(res => res.json())
@@ -24,16 +25,19 @@
 
   function displayOptions(res) {
     let display = document.querySelector('.display');
-    let title = res.title;
-    let link = res.link;
-    let titlep = document.createElement('p');
-    titlep.textContent = title;
-    // TODO: change into a clickable image
-    let linkp = document.createElement('p');
-    linkp.textContent = link;
+    for (let i = 0; i < res.length; i++) {
+      let title = res[i].title;
+      let link = res[i].link;
+      let titlep = document.createElement('p');
+      display.appendChild(titlep);
+      titlep.textContent = title;
+      // TODO: change into a clickable image
+      let linkp = document.createElement('p');
+      linkp.textContent = link;
 
-    display.appendChild(titlep);
-    display.appendChild(linkp);
+      display.appendChild(titlep);
+      display.appendChild(linkp);
+    }
   }
 
     /**

@@ -3,8 +3,8 @@
 const express = require('express');
 const app = express();
 
-let categories = ['Disney', 'Personality', 'Harry Potter', 'Food', 'Trivia'];
-let disney = [
+let genres = ['romance', 'comedy', 'action', 'family', 'horror'];
+let romance = [
   {
     'title': 'I\'ve Altered The Eyebrows On 20 Disney Characters – Can You Pick Out The Unaltered Photos?',
     'link': 'https://www.buzzfeed.com/hannahmarder/disney-eyebrow-real-or-fake-quiz'
@@ -26,7 +26,7 @@ let disney = [
     'link': 'https://www.buzzfeed.com/garfgarfff/decorate-your-dream-dorm-room-and-well-guess-whic-22hv8'
   }
 ];
-let personality = [
+let comedy = [
   {
     'title': 'I Actually Know Your Myers-Briggs Personality Type By The Way You Answer These 12 Random Questions',
     'link': 'https://www.buzzfeed.com/elliskeaton4/meyers-briggs-personality-test-80sw25uolm'
@@ -48,7 +48,7 @@ let personality = [
     'link': 'https://www.buzzfeed.com/pablovaldivia/reply-to-texts-uncover-a-truthz'
   }
 ];
-let harryPotter = [
+let action = [
   {
     'title': 'Ever Wondered Which Hogwarts Professor You\'re Most Like? Just Take This Quiz To Find Out',
     'link': 'https://www.buzzfeed.com/kirtishbohanee41/you-are-either-like-professor-mcgonagall-or-prof-4xr15i8xga'
@@ -70,7 +70,7 @@ let harryPotter = [
     'link': 'https://www.buzzfeed.com/silverdustxhearts/which-harry-potter-background-character-are-you-bbyzqtkjnt'
   }
 ];
-let food = [
+let family = [
   {
     'title': 'I Just Need To Know Where You Stand On These Classic Food Debates',
     'link': 'https://www.buzzfeed.com/saikiscoffeejelliee/food-and-drink-debates-poll'
@@ -92,7 +92,7 @@ let food = [
     'link': 'https://www.buzzfeed.com/susanacristalli/what-kind-of-fried-food-are-you'
   }
 ];
-let trivia = [
+let horror = [
   {
     'title': 'Only Someone Who Passed The 5th Grade With Flying Colors Can Ace This Simple Trivia Quiz',
     'link': 'https://www.buzzfeed.com/lorelaisrory/can-you-pass-this-fifth-grade-trivia-quiz'
@@ -116,42 +116,42 @@ let trivia = [
 
 ];
 
-app.get('/quizzes/categories', function (req, res) {
+app.get('/movies/genres', function (req, res) {
   res.type('text');
   res.send(getCategories());
 });
 
-app.get('/quizzes/list/:category', function (req, res) {
-  if(req.params['category'] === 'disney' ||
-    req.params['category'] === 'personality' ||
-    req.params['category'] === 'harrypotter' ||
-    req.params['category'] === 'food' ||
-    req.params['category'] === 'trivia') {
-    res.json(getQuizzes(req.params['category']));
+app.get('/movies/list/:genre', function (req, res) {
+  if(req.params['genre'] === 'romance' ||
+    req.params['genre'] === 'comedy' ||
+    req.params['genre'] === 'action' ||
+    req.params['genre'] === 'family' ||
+    req.params['genre'] === 'horror') {
+    res.json(getQuizzes(req.params['genre']));
   } else {
-    res.status(400).json({'error': 'no category listed for ' + req.params['category']});
+    res.status(400).json({'error': 'no category listed for ' + req.params['genre']});
   }
 });
 
 function getCategories() {
-  let result = 'Quiz Categories:\n';
-  for (let i = 0; i < categories.length; i++) {
-    result+= categories[i] + '\n';
+  let result = 'Movie Genres:\n';
+  for (let i = 0; i < genres.length; i++) {
+    result+= genres[i] + '\n';
   }
   return result;
 }
 
-function getQuizzes(category) {
-  if (category === 'disney') {
-    return disney;
-  } else if (category === 'personality') {
-    return personality;
-  } else if (category === 'harrypotter') {
-  return harryPotter;
-  } else if (category === 'food') {
-  return food;
-  } else if (category === 'trivia') {
-  return trivia;
+function getQuizzes(genre) {
+  if (genre === 'romance') {
+    return romance;
+  } else if (genre === 'comedy') {
+    return comedy;
+  } else if (genre === 'action') {
+  return action;
+  } else if (genre === 'family') {
+  return family;
+  } else if (genre === 'horror') {
+  return horror;
   }
 }
 
