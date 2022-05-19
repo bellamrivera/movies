@@ -121,9 +121,13 @@ app.get('/quizzes/categories', function (req, res) {
   res.send(getCategories());
 });
 
-app.get('/quizzes/quiz/:category', function (req, res) {
-  if(req.params['category'] === 'funnyJoke' || req.params['category'] === 'lameJoke') {
-    res.json(getJokes(req.params['category']));
+app.get('/quizzes/list/:category', function (req, res) {
+  if(req.params['category'] === 'disney' ||
+    req.params['category'] === 'personality' ||
+    req.params['category'] === 'harrypotter' ||
+    req.params['category'] === 'food' ||
+    req.params['category'] === 'trivia') {
+    res.json(getQuizzes(req.params['category']));
   } else {
     res.status(400).json({'error': 'no category listed for ' + req.params['category']});
   }
@@ -138,15 +142,15 @@ function getCategories() {
 }
 
 function getQuizzes(category) {
-  if (category === 'Disney') {
+  if (category === 'disney') {
     return disney;
-  } else if (category === 'Personality') {
+  } else if (category === 'personality') {
     return personality;
-  } else if (category === 'Harry Potter') {
+  } else if (category === 'harrypotter') {
   return harryPotter;
-  } else if (category === 'Food') {
+  } else if (category === 'food') {
   return food;
-  } else if (category === 'Trivia') {
+  } else if (category === 'trivia') {
   return trivia;
   }
 }
