@@ -6,114 +6,141 @@ const app = express();
 let genres = ['romance', 'comedy', 'action', 'family', 'horror'];
 let romance = [
   {
-    'title': 'I\'ve Altered The Eyebrows On 20 Disney Characters – Can You Pick Out The Unaltered Photos?',
-    'link': 'https://www.buzzfeed.com/hannahmarder/disney-eyebrow-real-or-fake-quiz'
+    'title': 'The Notebook',
+    'starring': 'Ryan Gosling, Rachel McAdams',
+    'released': '2004',
+    'blurb': 'This one’s a classic. When someone says romance movie, you think “The Notebook”. It’s a must-watch simply because you can’t walk through life not having seen this movie. Stay up to date, so that when people reference it, you won’t have to deal with them going, “*gasp* You haven’t seen it?”',
+    'synopsis': 'In 1940s South Carolina, mill worker Noah Calhoun (Ryan Gosling) and rich girl Allie (Rachel McAdams) are desperately in love. But her parents don\'t approve. When Noah goes off to serve in World War II, it seems to mark the end of their love affair. In the interim, Allie becomes involved with another man (James Marsden). But when Noah returns to their small town years later, on the cusp of Allie\'s marriage, it soon becomes clear that their romance is anything but over.',
+    'image': 'notebook.jpg'
   },
   {
-    'title': 'If You Can Guess All 11 Disney Characters Based On These Brain Teasers, You\'re A Genius',
-    'link': 'https://www.buzzfeed.com/tessafahey/disney-character-brain-teasers'
+    'title': 'Kimi No Na Wa (Your Name)',
+    'starring': 'Ryûnosuke Kamiki, Mone Kamishiraishi',
+    'released': '2016',
+    'blurb': 'This one’s for my anime fans out there. However, only watch this if you’re in the mood for a good cry. I watched this movie once four years ago and still haven’t fully recovered. It’s great.',
+    'synopsis': 'Two teenagers share a profound, magical connection upon discovering they are swapping bodies. Things manage to become even more complicated when the boy and girl decide to meet in person.',
+    'image': 'kimi.jpg'
   },
   {
-    'title': 'Guess The Disney Princess From Her Colour Palette And We\'ll Reveal How Much Of A Disney Stan You Are',
-    'link': 'Because the teacher told him it was a piece of cake!'
-  },
-  {
-    'title': 'It\'s Time To Find Out Which Disney Villain Matches Your Personality',
-    'link': 'https://www.buzzfeed.com/digmarketing315/which-disney-villain-are-you-97s951te3b'
-  },
-  {
-    'title': 'Which Disney Villain Would Be Your Roommate Based On Your Dream Dorm Room?',
-    'link': 'https://www.buzzfeed.com/garfgarfff/decorate-your-dream-dorm-room-and-well-guess-whic-22hv8'
+    'title': 'He\'s All That',
+    'starring': 'Addison Rae, Tanner Buchanan',
+    'released': '2021',
+    'blurb': 'This movie takes an interesting approach to the classic “She’s All That” and finds a very creative way to… ruin it. Grab some friends and some popcorn and get ready to laugh. Make sure you have your remote next to you so you can pause every five minutes to make fun of what just happened. My friends and I had a great time with this one. 10/10 recommend.',
+    'synopsis': 'An influencer who specializes in makeovers bets that she can transform an unpopular classmate into a prom king.',
+    'image': 'allthat.jpg'
   }
 ];
 let comedy = [
   {
-    'title': 'I Actually Know Your Myers-Briggs Personality Type By The Way You Answer These 12 Random Questions',
-    'link': 'https://www.buzzfeed.com/elliskeaton4/meyers-briggs-personality-test-80sw25uolm'
-  },
-  {
-    'title': 'I Can Sum Up Your Whole Personality In 5 Words With Only 15 Random Questions',
-    'link': 'https://www.buzzfeed.com/angelicaamartinez/5-word-personality-quiz'
-  },
-  {
-    'title': 'This Quiz Will Reveal What First Impression You Make On Others',
-    'link': 'https://www.buzzfeed.com/natalyalobanova/this-quiz-will-reveal-what-people-really-think-of-you-when'
-  },
-  {
-    'title': 'What Emoji Matches Your Personality?',
-    'link': 'https://www.buzzfeed.com/queenaaliyah/what-emoji-matches-your-personality-2ksbct6282'
-  },
-  {
-    'title': 'How You Respond To These Texts Will Unveil A Truth About You',
-    'link': 'https://www.buzzfeed.com/pablovaldivia/reply-to-texts-uncover-a-truthz'
+    'title': 'Jumanji: Welcome to the Jungle',
+    'starring': 'Dwayne Johnson, Jack Black, Kevin Hart, Karen Gillan',
+    'released': '2017',
+    'blurb': 'Okay, I know this is technically an action movie, but it is just too funny. I mean, Dwayne Johnson, Jack Black, and Kevin Hart interacting with each other for 2 hours? Sign me up. And if you don’t feel like watching the whole movie, just skip to, like, 47:00.',
+    'synopsis': 'Four high school kids discover an old video game console and are drawn into the game's jungle setting, literally becoming the adult avatars they chose. What they discover is that you don't just play Jumanji - you must survive it. To beat the game and return to the real world, they\'ll have to go on the most dangerous adventure of their lives, discover what Alan Parrish left 20 years ago, and change the way they think about themselves - or they\'ll be stuck in the game forever.',
+    'image': ''
   }
+  // },
+  // {
+  //   'title':
+  //   'starring':
+  //   'released':
+  //   'blurb':
+  //   'synopsis':
+  //   'image':
+  // },
+  // {
+  //   'title':
+  //   'starring':
+  //   'released':
+  //   'blurb':
+  //   'synopsis':
+  //   'image':
+  // }
 ];
 let action = [
   {
-    'title': 'Ever Wondered Which Hogwarts Professor You\'re Most Like? Just Take This Quiz To Find Out',
-    'link': 'https://www.buzzfeed.com/kirtishbohanee41/you-are-either-like-professor-mcgonagall-or-prof-4xr15i8xga'
+    'title': 'The Mission: Impossible Series',
+    'starring': 'Tom Cruise, Simon Pegg, Ving Rhames',
+    'released': '1996-2018',
+    'blurb': 'These are all great. Had me super engaged the whole time. My family had a week where we just watched one Mission Impossible movie every night. There’s a ton of action (obviously — that’s why it’s in this category), plot twists, awesome directing, and also Tom Cruise is hot.',
+    'synopsis': 'Synopsis: The films follow the missions of the IMF’s (Impossible Missions Force) main field team under the leadership of Ethan Hunt to stop an enemy force all the while preventing an impending global disaster.',
+    'image': 'jumanji.jpg'
   },
   {
-    'title': 'You Might Need A Remembrall To Ace This Trivia Quiz About The Spells From "Harry Potter"',
-    'link': 'https://www.buzzfeed.com/mischief_managed_marauders/5-difficult-harry-potter-spells-can-you-identify-dtc64h0vm8'
-  },
-  {
-    'title': 'Can You Guess The "Harry Potter" Character Based On An Awful Drawing?',
-    'link': 'https://www.buzzfeed.com/e_weasley/can-you-guess-the-harry-potter-character-by-the-aw-3tx6jnz99n'
-  },
-  {
-    'title': 'You\'re Not Ready For This "Harry Potter" Edition Of "Would You Rather?" – Trust Me',
-    'link': 'https://www.buzzfeed.com/hslfgpereda/would-you-rather-harry-potter-version-eresa585m6'
-  },
-  {
-    'title': 'Which Forgotten "Harry Potter" Background Character Are You?',
-    'link': 'https://www.buzzfeed.com/silverdustxhearts/which-harry-potter-background-character-are-you-bbyzqtkjnt'
+    'title': 'Now You See Me',
+    'starring': 'Jesse Eisenberg, Woody Harrelson, Dave Franco, Isla Fisher',
+    'released': '2013',
+    'blurb': 'I struggled to choose between this and Oceans 11. I love a good heist. I ended up going with this one because it’s a little less mainstream. I mean a bunch of magicians trying to break into a bank? C’mon, now you gotta watch it just out of sheer curiosity.',
+    'synopsis': 'Charismatic magician Atlas (Jesse Eisenberg) leads a team of talented illusionists called the Four Horsemen. Atlas and his comrades mesmerize audiences with a pair of amazing magic shows that drain the bank accounts of the corrupt and funnel the money to audience members. A federal agent (Mark Ruffalo) and an Interpol detective (Mélanie Laurent) intend to rein in the Horsemen before their next caper, and they turn to Thaddeus (Morgan Freeman), a famous debunker, for help.',
+    'image': 'nysm.jpg'
   }
+  // },
+  // {
+  //   'title':
+  //   'starring':
+  //   'released':
+  //   'blurb':
+  //   'synopsis':
+  //   'image':
+  // }
 ];
 let family = [
   {
-    'title': 'I Just Need To Know Where You Stand On These Classic Food Debates',
-    'link': 'https://www.buzzfeed.com/saikiscoffeejelliee/food-and-drink-debates-poll'
+    'title': 'Soul',
+    'starring': 'Jamie Foxx, Tina Fey',
+    'released': '2020',
+    'blurb': 'If you’re looking for a little bit of an inspirational film, here it is. I also love this, though, because it’s got some cool deeper existential layers to it, which really make you think. Also, the little souls are so cute.',
+    'synopsis': 'Joe is a middle-school band teacher whose life hasnt quite gone the way he expected. His true passion is jazz -- and he’s good. But when he travels to another realm to help someone find their passion, he soon discovers what it means to have soul.',
+    'image': 'soul.jpg'
   },
   {
-    'title': 'Okay, But Can We *Actually* Guess Your Age Based On Your Random Food Preferences?',
-    'link': 'https://www.buzzfeed.com/josephdennismartin27/rainbow-foods-guess-age-quiz'
+    'title': 'Aladdin (Live Action)',
+    'starring': 'Mena Massoud, Naomi Scott, Will Smith',
+    'released': '2019',
+    'blurb': 'This is probably a controversial opinion, but this one is better than the original (don’t @ me). I mean, the cinematics, and the songs, and the characters (I mean, I know the characters are the same, but, like, they’re not). I love what they did with it, and I will never get tired of this movie. Yes, I have “Speechless” on my Spotify playlist.',
+    'synopsis': 'Aladdin is a lovable street urchin who meets Princess Jasmine, the beautiful daughter of the sultan of Agrabah. While visiting her exotic palace, Aladdin stumbles upon a magic oil lamp that unleashes a powerful, wisecracking, larger-than-life genie. As Aladdin and the genie start to become friends, they must soon embark on a dangerous mission to stop the evil sorcerer, Jafar, from overthrowing young Jasmine’s kingdom.',
+    'image': 'aladdin'
   },
   {
-    'title': 'We\'ll Give You A Compliment Based On The Meals You Eat For The Day',
-    'link': 'https://www.buzzfeed.com/celiii/plan-your-meals-and-well-tell-you-the-best-thing-bujhralcjy'
+    'title': 'Tangled',
+    'starring': 'Mandy Moore, Zachary Levi, Donna Murphy',
+    'released': '2010',
+    'blurb': 'One of my favorite Disney princess movies. Again, the songs are great. It’s also just such a wholesome movie — girl sees world for the first time, is excited about everything, you know. I also love the innocent-girl-meets-rebellious-boy trope.',
+    'synopsis': 'Disney animation of a classic tale. Beautiful princess Rapunzel has been locked away in a tower since she was captured as a baby by an old hag. Her magical long blonde hair has the power to provide eternal youth, and the evil Gothel uses this power to keep her young. At the age of 18, Rapunzel becomes curious about the outside world, and when a prince uses her tower as a refuge, she asks him to help her escape.',
+    'image': 'tangled'
   }
-  ,{
-    'title': 'Order Some Food And We\'ll Reveal How Expensive Your Tastebuds Are',
-    'link': 'https://www.buzzfeed.com/angelicaamartinez/expensive-food-quiz'
-  }
-  ,{
-    'title': 'If You Were A Fried Food, What Would You Be?',
-    'link': 'https://www.buzzfeed.com/susanacristalli/what-kind-of-fried-food-are-you'
+];
+let bellasfaves = [
+    {
+    'title': 'Mamma Mia! Here We Go Again',
+    'starring': 'Lily James, Amanda Seyfried, Meryl Streep',
+    'released': '2018',
+    'blurb': 'My literal comfort movie. Obviously the songs are great (I think the first movie may still win, though). The casting is perfection. The movie just inspires me to go see the world and be a free spirit. And the way it wraps up is just so clean, no loose ends *chef’s kiss*',
+    'synopsis': 'In 1979 young Donna, Tanya and Rosie graduate from Oxford University -- leaving Donna free to embark on a series of adventures throughout Europe. On her journeys, she makes the acquaintances of Harry, Bill and Sam -- the latter whom she falls in love with, but he’s also the man who breaks her heart. In the present day, Donna’s pregnant daughter, Sophie, dreams of renovating a taverna while reuniting with her mothers old friends and boyfriends on the Greek island of Kalokairi.',
+    'image': 'mammamia.jpg'
+  },
+    {
+    'title': 'Charlie’s Angels',
+    'starring': 'Kristen Stewart, Ella Balinska, Naomi Scott, Elizabeth Banks, Patrick Stewart',
+    'released': '2019',
+    'blurb': 'Just a bunch of women being badass. Love that. They’re just so cool, I don’t know what else to say. I am also in love with the entire cast. Go watch it.',
+    'synopsis': 'Elena Houghlin is a scientist, engineer and inventor of Calisto -- a sustainable energy source that will revolutionize the way people use power. But when the cutting edge technology falls into the wrong hands, Elena turns to the Townsend Agency for help. Now, it‘s up to the Angels -- Jane, Sabina and the newly recruited Elena -- to retrieve Calisto before it can be transformed into a weapon of mass destruction.',
+    'image': 'angels.jpg'
+  },
+    {
+    'title': 'The Harry Potter Movies',
+    'starring': 'Daniel Radcliff, Emma Watson, Rupert Grint',
+    'released': '2001-2011',
+    'blurb': 'I grew up on Harry Potter. I started reading the books in second grade, and have read the series three times since then. I don’t even know how many times I’ve seen the movies but it’s A LOT. I was really bummed when I turned 12 and didn’t get my letter :( Anyways, if you haven’t seen these or don’t like these, we cannot be friends. If you do like these, wyd Friday night? Let’s make butterbeer and have a movie marathon.',
+    'synopsis': 'The main story arc concerns Harry’s struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic and subjugate all wizards and Muggles (non-magical people).',
+    'image': 'harrypotter.jpg'
   }
 ];
 let horror = [
   {
     'title': 'Only Someone Who Passed The 5th Grade With Flying Colors Can Ace This Simple Trivia Quiz',
     'link': 'https://www.buzzfeed.com/lorelaisrory/can-you-pass-this-fifth-grade-trivia-quiz'
-  },
-  {
-    'title': 'Anyone With Minimal Logo Knowledge Can Pass This Restaurant Logos Quiz',
-    'link': 'https://www.buzzfeed.com/mwjones3/can-you-pass-this-ap-restaurant-logo-quiz'
-  },
-  {
-    'title': 'In This US Geography Quiz, If You\'re Close Enough, You\'re Correct',
-    'link': 'https://www.buzzfeed.com/audreyworboys/us-map-quiz'
-  },
-  {
-    'title': 'Only A True Grammar Expert Will Be Able To Pass This Quiz',
-    'link': 'https://www.buzzfeed.com/search?q=geography&type=quiz'
-  },
-  {
-    'title': 'Honestly, We\'ll Be Suuuuuuuper Impressed If You Can Complete All 9 Of These Common Phrases',
-    'link': 'https://www.buzzfeed.com/cmc33/complete-common-phrases-trivia-quiz'
   }
-
 ];
 
 app.get('/movies/genres', function (req, res) {
