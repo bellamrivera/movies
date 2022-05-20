@@ -75,6 +75,11 @@
       let img = document.createElement('img');
       img.src = res[i].image;
 
+      if (res[i].image === 'impossible.jpg' || res[i].image === 'harrypotter.jpg'
+        || res[i].image === 'soul.jpg') {
+          img.classList.add('wide');
+        }
+
       // add stats
       let stars = document.createElement('p');
       stars.textContent = "STARRING: " + res[i].starring;

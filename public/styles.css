@@ -55,6 +55,10 @@ img {
   width: 200px;
 }
 
+.wide {
+  width: 320px;
+}
+
 #button-section {
   justify-content: space-around;
   margin-left: 100px;
