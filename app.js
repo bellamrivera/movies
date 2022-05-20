@@ -85,9 +85,9 @@ let comedy = [
       'think about themselves - or they\'ll be stuck in the game forever.',
 
     /**
-    * https://m.media-amazon.com/images/M/MV5BODQ0NDhjYWItYTMxZi00NTk2LWIzNDEt
-    * OWZiYWYxZjc2MTgxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg
-    */
+     * https://m.media-amazon.com/images/M/MV5BODQ0NDhjYWItYTMxZi00NTk2LWIzNDEt
+     * OWZiYWYxZjc2MTgxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg
+     */
     'image': 'jumanji.jpg'
   },
   {
@@ -104,8 +104,10 @@ let comedy = [
       'chance to propose to his girlfriend, he only succeeds in incurring the wrath of his ' +
       'prospective father-in-law and almost destroys their home in the process.',
 
-    // https://m.media-amazon.com/images/M/MV5BMGNlMGZiMmUtZjU0NC00MWU4LWI0YTgt
-      // YzdlNGVhZGU4NWZlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg
+    /**
+     * https://m.media-amazon.com/images/M/MV5BMGNlMGZiMmUtZjU0NC00MWU4LWI0YTgt
+     * YzdlNGVhZGU4NWZlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg
+     */
     'image': 'parents.jpg'
   },
   {
@@ -140,8 +142,10 @@ let action = [
       'Force) main field team under the leadership of Ethan Hunt to stop an enemy force all ' +
       'the while preventing an impending global disaster.',
 
-    /* https://hd-report.com/wp-content/uploads/2018/05/mission-impossible-4k-
-    blu-ray-films-1280px.jpg?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-2 */
+    /**
+     * https://hd-report.com/wp-content/uploads/2018/05/mission-impossible-4k-
+     * blu-ray-films-1280px.jpg?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-2
+     */
     'image': 'impossible.jpg'
   },
   {
@@ -159,8 +163,10 @@ let action = [
       'detective (Mélanie Laurent) intend to rein in the Horsemen before their next caper, ' +
       'and they turn to Thaddeus (Morgan Freeman), a famous debunker, for help.',
 
-    /* https://m.media-amazon.com/images/M/MV5BMTY0NDY3MDMxN15BMl5BanBnXkFtZTcw
-      // OTM5NzMzOQ@@._V1_FMjpg_UX1000_.jpg */
+    /**
+     * https://m.media-amazon.com/images/M/MV5BMTY0NDY3MDMxN15BMl5BanBnXkFtZTcw
+     * OTM5NzMzOQ@@._V1_FMjpg_UX1000_.jpg
+     */
     'image': 'nysm.jpg'
   },
   {
