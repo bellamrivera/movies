@@ -7,10 +7,10 @@
   be displayed. */
 
 body {
-  background-color: #FBF5AE;
+  background-color: #BDBDBD;
   background-size: cover;
   background-repeat: none;
-  font-family: 'Koulen', sans-serif;
+  font-family: 'Mali', sans-serif;
 }
 
 body, button {
@@ -60,19 +60,22 @@ img {
   text-align: center;
 }
 
+#display_box {
+  display: flex;
+  justify-content: center;
+}
+
 .display {
   width: 50%;
   margin-top: 100px;
   border: 4px solid white;
-  border-radius: 5%;
 }
 
 button {
   background-color: white;
   box-shadow: 5px 5px #888888;
   font-size: 17px;
-  font-family: 'Koulen', sans-serif;
-  border-radius: 10%;
+  font-family: 'Mali', sans-serif;
   height: 50px;
   width: 100px;
   border: none;
@@ -87,7 +90,6 @@ footer p {
 }
 
 footer {
-  position: fixed;
   width: 100%;
   bottom: 0;
 }

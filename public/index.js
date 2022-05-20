@@ -13,14 +13,32 @@
 
   function getCategory() {
     let btnId = this.id;
-    console.log(btnId);
-    let url = '/movies/list/' + btnId;
-    fetch(url)
+    let url;
+    if (btnId === 'horror') {
+      url ='/movies/horror';
+      fetch(url)
+      .then(statusCheck)
+      .then(res => res.text())
+      // .then(console.log)
+      .then(displayHorror)
+      .catch(console.error);
+    } else {
+      url = '/movies/list/' + btnId;
+      fetch(url)
       .then(statusCheck)
       .then(res => res.json())
       // .then(console.log)
       .then(displayOptions)
       .catch(console.error);
+    }
+    // console.log(btnId);
+  }
+
+  function displayHorror(res) {
+    let display = document.querySelector('.display');
+    let p = document.createElement('p');
+    p.textContent = res;
+    display.appendChild(p);
   }
 
   function displayOptions(res) {

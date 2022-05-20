@@ -110,12 +110,6 @@ let family = [
     'image': 'tangled.jpg'
   }
 ];
-let horror = [
-  {
-    'title': 'Only Someone Who Passed The 5th Grade With Flying Colors Can Ace This Simple Trivia Quiz',
-    'link': 'https://www.buzzfeed.com/lorelaisrory/can-you-pass-this-fifth-grade-trivia-quiz'
-  }
-];
 let bellasfaves = [
   {
   'title': 'Mamma Mia! Here We Go Again',
@@ -143,9 +137,9 @@ let bellasfaves = [
   }
 ];
 
-app.get('/movies/genres', function (req, res) {
+app.get('/movies/horror', function (req, res) {
   res.type('text');
-  res.send(getCategories());
+  res.send("Absolutely not. Horror movies suck. I don’t recommend any of them. Go pick a different category.");
 });
 
 app.get('/movies/list/:genre', function (req, res) {
@@ -153,7 +147,6 @@ app.get('/movies/list/:genre', function (req, res) {
     req.params['genre'] === 'comedy' ||
     req.params['genre'] === 'action' ||
     req.params['genre'] === 'family' ||
-    req.params['genre'] === 'horror' ||
     req.params['genre'] === 'bellasfaves') {
     res.json(getQuizzes(req.params['genre']));
   } else {
@@ -180,7 +173,7 @@ function getQuizzes(genre) {
     return family;
   } else if (genre === 'horror') {
     return horror;
-  } else if (genre === 'bellafaves') {
+  } else if (genre === 'bellasfaves') {
     return bellasfaves;
   }
 }
