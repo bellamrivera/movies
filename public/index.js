@@ -15,7 +15,7 @@
     let btnId = this.id;
     let url;
     if (btnId === 'horror') {
-      url ='/movies/horror';
+      url = '/movies/horror';
       fetch(url)
       .then(statusCheck)
       .then(res => res.text())
@@ -29,13 +29,11 @@
       fetch(url)
       .then(statusCheck)
       .then(res => res.json())
-      // .then(console.log)
       .then((res) => {
         displayOptions(res, btnId);
       })
       .catch(console.error);
     }
-    // console.log(btnId);
   }
 
   function displayHorror(res, btnId) {
@@ -46,10 +44,14 @@
     display.classList.remove(classToDelete);
     display.classList.add(color);
 
-    let p = document.createElement('p');
-    p.textContent = res;
-    p.classList.add('title');
+    let para = document.createElement('p');
+    para.textContent = res;
+    para.classList.add('title');
     display.appendChild(p);
+
+    // keep footer at the bottom
+    let foot = document.querySelector('footer');
+    foot.classList.add('abs');
   }
 
   function displayOptions(res, btnId) {
@@ -69,7 +71,7 @@
       titlep.textContent = title;
       titlep.classList.add('title');
 
-      //add image
+      // add image
       let img = document.createElement('img');
       img.src = res[i].image;
 
@@ -95,14 +97,17 @@
       stats.appendChild(blurb);
       stats.appendChild(synop);
 
+      // change footer position so it stays at the bottom
+      let foot = document.querySelector('footer');
+      foot.classList.remove('abs');
     }
   }
 
     /**
-   * Checks the success of the fetch call
-   * @param {object} res status for the fetch call (200 = ok, 404 = not found, etc.)
-   */
-     async function statusCheck(res) {
+    * Checks the success of the fetch call
+    * @param {object} res status for the fetch call (200 = ok, 404 = not found, etc.)
+    */
+    async function statusCheck(res) {
       if (!res.ok) {
         throw new Error(await res.text());
       }

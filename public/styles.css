@@ -10,6 +10,9 @@ body {
   background-color: #BDBDBD;
   background-size: cover;
   background-repeat: none;
+}
+
+body, button {
   font-family: 'Mali', sans-serif;
 }
 
@@ -28,26 +31,15 @@ h1 {
   font-size: 42px;
 }
 
-main > section + section, #button_section, header {
+main > section + section, #button-section, header, #intro, #display-box {
   display: flex;
-}
-
-main > section + section, header {
-  flex-direction: column;
-  align-items: center;
 }
 
 header {
   margin-bottom: 40px;
 }
 
-header p {
-  width: 57%;
-  font-size: 20px;
-}
-
 #intro {
-  display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
@@ -66,7 +58,7 @@ img {
   width: 200px;
 }
 
-#button_section {
+#button-section {
   justify-content: space-around;
   margin-left: 100px;
   margin-right: 100px;
@@ -76,8 +68,7 @@ img {
   text-align: center;
 }
 
-#display_box {
-  display: flex;
+#display-box {
   justify-content: center;
 }
 
@@ -85,8 +76,11 @@ img {
   width: 50%;
   margin-top: 100px;
   /* border: 4px solid white; */
-  background-color: white;
   box-shadow: 10px 10px #888888;
+}
+
+.display, button {
+  background-color: white;
 }
 
 .left {
@@ -97,19 +91,9 @@ img {
   padding-bottom: 40px;
 }
 
-.center {
-  text-align: center;
-}
-
-.bold {
-  color: red;
-}
-
 button {
-  background-color: white;
   box-shadow: 5px 5px #888888;
   font-size: 17px;
-  font-family: 'Mali', sans-serif;
   height: 50px;
   width: 100px;
   border: none;
@@ -143,12 +127,12 @@ footer p {
   font-size: 12px;
 }
 
-.hidden {
-  display: none;
-}
-
 footer {
   width: 100%;
   top: 20;
   bottom: 0;
+}
+
+.abs {
+  position: absolute;
 }

@@ -110,38 +110,39 @@ let family = [
 ];
 let bellasfaves = [
   {
-  'title': 'Mamma Mia! Here We Go Again',
-  'starring': 'Lily James, Amanda Seyfried, Meryl Streep',
-  'released': '2018',
-  'blurb': 'My literal comfort movie. Obviously the songs are great (I think the first movie may still win, though). The casting is perfection. The movie just inspires me to go see the world and be a free spirit. And the way it wraps up is just so clean, no loose ends *chef’s kiss*',
-  'synopsis': 'In 1979 young Donna, Tanya and Rosie graduate from Oxford University -- leaving Donna free to embark on a series of adventures throughout Europe. On her journeys, she makes the acquaintances of Harry, Bill and Sam -- the latter whom she falls in love with, but he’s also the man who breaks her heart. In the present day, Donna’s pregnant daughter, Sophie, dreams of renovating a taverna while reuniting with her mothers old friends and boyfriends on the Greek island of Kalokairi.',
-  'image': 'mammamia.jpg'
+    'title': 'Mamma Mia! Here We Go Again',
+    'starring': 'Lily James, Amanda Seyfried, Meryl Streep',
+    'released': '2018',
+    'blurb': 'My literal comfort movie. Obviously the songs are great (I think the first movie may still win, though). The casting is perfection. The movie just inspires me to go see the world and be a free spirit. And the way it wraps up is just so clean, no loose ends *chef’s kiss*',
+    'synopsis': 'In 1979 young Donna, Tanya and Rosie graduate from Oxford University -- leaving Donna free to embark on a series of adventures throughout Europe. On her journeys, she makes the acquaintances of Harry, Bill and Sam -- the latter whom she falls in love with, but he’s also the man who breaks her heart. In the present day, Donna’s pregnant daughter, Sophie, dreams of renovating a taverna while reuniting with her mothers old friends and boyfriends on the Greek island of Kalokairi.',
+    'image': 'mammamia.jpg'
   },
   {
-  'title': 'Charlie’s Angels',
-  'starring': 'Kristen Stewart, Ella Balinska, Naomi Scott, Elizabeth Banks, Patrick Stewart',
-  'released': '2019',
-  'blurb': 'Just a bunch of women being badass. Love that. They’re just so cool, I don’t know what else to say. I am also in love with the entire cast. Go watch it.',
-  'synopsis': 'Elena Houghlin is a scientist, engineer and inventor of Calisto -- a sustainable energy source that will revolutionize the way people use power. But when the cutting edge technology falls into the wrong hands, Elena turns to the Townsend Agency for help. Now, it‘s up to the Angels -- Jane, Sabina and the newly recruited Elena -- to retrieve Calisto before it can be transformed into a weapon of mass destruction.',
-  'image': 'angels.jpg'
+    'title': 'Charlie’s Angels',
+    'starring': 'Kristen Stewart, Ella Balinska, Naomi Scott, Elizabeth Banks, Patrick Stewart',
+    'released': '2019',
+    'blurb': 'Just a bunch of women being badass. Love that. They’re just so cool, I don’t know what else to say. I am also in love with the entire cast. Go watch it.',
+    'synopsis': 'Elena Houghlin is a scientist, engineer and inventor of Calisto -- a sustainable energy source that will revolutionize the way people use power. But when the cutting edge technology falls into the wrong hands, Elena turns to the Townsend Agency for help. Now, it‘s up to the Angels -- Jane, Sabina and the newly recruited Elena -- to retrieve Calisto before it can be transformed into a weapon of mass destruction.',
+    'image': 'angels.jpg'
   },
   {
-  'title': 'The Harry Potter Movies',
-  'starring': 'Daniel Radcliff, Emma Watson, Rupert Grint',
-  'released': '2001-2011',
-  'blurb': 'I grew up on Harry Potter. I started reading the books in second grade, and have read the series three times since then. I don’t even know how many times I’ve seen the movies but it’s A LOT. I was really bummed when I turned 12 and didn’t get my letter :( Anyways, if you haven’t seen these or don’t like these, we cannot be friends. If you do like these, wyd Friday night? Let’s make butterbeer and have a movie marathon.',
-  'synopsis': 'The main story arc concerns Harry’s struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic and subjugate all wizards and Muggles (non-magical people).',
-  'image': 'harrypotter.jpg'
+    'title': 'The Harry Potter Movies',
+    'starring': 'Daniel Radcliff, Emma Watson, Rupert Grint',
+    'released': '2001-2011',
+    'blurb': 'I grew up on Harry Potter. I started reading the books in second grade, and have read the series three times since then. I don’t even know how many times I’ve seen the movies but it’s A LOT. I was really bummed when I turned 12 and didn’t get my letter :( Anyways, if you haven’t seen these or don’t like these, we cannot be friends. If you do like these, wyd Friday night? Let’s make butterbeer and have a movie marathon.',
+    'synopsis': 'The main story arc concerns Harry’s struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic and subjugate all wizards and Muggles (non-magical people).',
+    'image': 'harrypotter.jpg'
   }
 ];
 
-app.get('/movies/horror', function (req, res) {
+app.get('/movies/horror', function(req, res) {
   res.type('text');
-  res.send("Absolutely not. Horror movies suck. I don’t recommend any of them. Go pick a different category.");
+  res.send("Absolutely not. Horror movies suck. I don’t recommend any of them. "
+    + "Go pick a different category.");
 });
 
-app.get('/movies/list/:genre', function (req, res) {
-  if(req.params['genre'] === 'romance' ||
+app.get('/movies/list/:genre', function(req, res) {
+  if (req.params['genre'] === 'romance' ||
     req.params['genre'] === 'comedy' ||
     req.params['genre'] === 'action' ||
     req.params['genre'] === 'family' ||
@@ -152,14 +153,6 @@ app.get('/movies/list/:genre', function (req, res) {
   }
 });
 
-function getCategories() {
-  let result = 'Movie Genres:\n';
-  for (let i = 0; i < genres.length; i++) {
-    result+= genres[i] + '\n';
-  }
-  return result;
-}
-
 function getQuizzes(genre) {
   if (genre === 'romance') {
     return romance;
@@ -169,8 +162,6 @@ function getQuizzes(genre) {
     return action;
   } else if (genre === 'family') {
     return family;
-  } else if (genre === 'horror') {
-    return horror;
   } else if (genre === 'bellasfaves') {
     return bellasfaves;
   }
