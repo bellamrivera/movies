@@ -149,5 +149,6 @@ footer p {
 
 footer {
   width: 100%;
+  top: 20;
   bottom: 0;
 }
