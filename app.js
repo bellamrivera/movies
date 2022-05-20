@@ -18,7 +18,7 @@ let romance = [
     'title': 'The Notebook',
     'starring': 'Ryan Gosling, Rachel McAdams',
     'released': '2004',
-    'blurb': 'This one’s a classic. When someone says "romance movie", you think “The Notebook”.' +
+    'blurb': 'This one’s a classic. When someone says "romance movie", you think “The Notebook”. ' +
       'It’s a must-watch simply because you can’t go through life not having seen this movie. ' +
       'Stay up to date, so that when people reference it, you won’t have to deal with them ' +
       'going, “*gasp* You haven’t seen it?”',
@@ -43,8 +43,8 @@ let romance = [
       'swapping bodies. Things manage to become even more complicated when the boy and girl ' +
       'decide to meet in person.',
 
-    // https://m.media-amazon.com/images/M/MV5BODRmZDVmNzUtZDA4ZC00NjhkLWI2M2UtN2M0ZDIzNDcxYThjL2lt
-      // YWdlXkEyXkFqcGdeQXVyNTk0MzMzODA@._V1_FMjpg_UX1000_.jpg
+    /* https://m.media-amazon.com/images/M/MV5BODRmZDVmNzUtZDA4ZC00NjhkLWI2M2UtN2M0ZDIzNDcxYThjL2lt
+    YWdlXkEyXkFqcGdeQXVyNTk0MzMzODA@._V1_FMjpg_UX1000_.jpg */
     'image': 'kimi.jpg'
   },
   {
@@ -59,8 +59,8 @@ let romance = [
     'synopsis': 'An influencer who specializes in makeovers bets that she can transform an ' +
       'unpopular classmate into a prom king.',
 
-    // https://m.media-amazon.com/images/M/MV5BYzM3NmYyMTItZWY5My00MTQzLWFmMzEtO
-      // Tc2ZjRkMDJkYWM3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg
+    /* https://m.media-amazon.com/images/M/MV5BYzM3NmYyMTItZWY5My00MTQzLWFmMzEtO
+    Tc2ZjRkMDJkYWM3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg */
     'image': 'allthat.jpg'
   }
 ];
@@ -80,8 +80,8 @@ let comedy = [
       'their lives, discover what Alan Parrish left 20 years ago, and change the way they ' +
       'think about themselves - or they\'ll be stuck in the game forever.',
 
-    // https://m.media-amazon.com/images/M/MV5BODQ0NDhjYWItYTMxZi00NTk2LWIzNDEt
-      // OWZiYWYxZjc2MTgxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg
+    /* https://m.media-amazon.com/images/M/MV5BODQ0NDhjYWItYTMxZi00NTk2LWIzNDEt
+      // OWZiYWYxZjc2MTgxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg */
     'image': 'jumanji.jpg'
   },
   {
@@ -134,8 +134,8 @@ let action = [
       'Force) main field team under the leadership of Ethan Hunt to stop an enemy force all ' +
       'the while preventing an impending global disaster.',
 
-    // https://hd-report.com/wp-content/uploads/2018/05/mission-impossible-4k-
-      // blu-ray-films-1280px.jpg?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-2
+    /* https://hd-report.com/wp-content/uploads/2018/05/mission-impossible-4k-
+    blu-ray-films-1280px.jpg?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-2 */
     'image': 'impossible.jpg'
   },
   {
@@ -153,8 +153,8 @@ let action = [
       'detective (Mélanie Laurent) intend to rein in the Horsemen before their next caper, ' +
       'and they turn to Thaddeus (Morgan Freeman), a famous debunker, for help.',
 
-    // https://m.media-amazon.com/images/M/MV5BMTY0NDY3MDMxN15BMl5BanBnXkFtZTcw
-      // OTM5NzMzOQ@@._V1_FMjpg_UX1000_.jpg
+    /* https://m.media-amazon.com/images/M/MV5BMTY0NDY3MDMxN15BMl5BanBnXkFtZTcw
+      // OTM5NzMzOQ@@._V1_FMjpg_UX1000_.jpg */
     'image': 'nysm.jpg'
   },
   {
@@ -174,8 +174,8 @@ let action = [
       'release the full power of Black Panther to defeat his foes and secure the safety of ' +
       'his people.',
 
-    // https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgw
-      // MTc4NTMwNDI@._V1_.jpg
+    /* https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgw
+    MTc4NTMwNDI@._V1_.jpg */
     'image': 'panther.jpg'
   }
 ];
@@ -209,8 +209,8 @@ let family = [
     'As Aladdin and the genie start to become friends, they must soon embark on a dangerous ' +
     'mission to stop the evil sorcerer, Jafar, from overthrowing young Jasmine’s kingdom.',
 
-    // https://m.media-amazon.com/images/M/MV5BMjQ2ODIyMjY4MF5BMl5BanBnXkFtZTgw
-      // NzY4ODI2NzM@._V1_.jpg
+    /* https://m.media-amazon.com/images/M/MV5BMjQ2ODIyMjY4MF5BMl5BanBnXkFtZTgw
+    NzY4ODI2NzM@._V1_.jpg */
     'image': 'aladdin.jpg'
   },
   {
