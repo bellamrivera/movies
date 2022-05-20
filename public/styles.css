@@ -46,6 +46,10 @@ p {
   font-size: 24px;
 }
 
+img {
+  width: 200px;
+}
+
 #button_section {
   justify-content: space-around;
   margin-left: 100px;

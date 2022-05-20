@@ -25,18 +25,37 @@
 
   function displayOptions(res) {
     let display = document.querySelector('.display');
+    display.innerHTML = '';
+
     for (let i = 0; i < res.length; i++) {
+
+      // add title
       let title = res[i].title;
-      let link = res[i].link;
       let titlep = document.createElement('p');
       display.appendChild(titlep);
       titlep.textContent = title;
-      // TODO: change into a clickable image
-      let linkp = document.createElement('p');
-      linkp.textContent = link;
+
+      //add image
+      let img = document.createElement('img');
+      img.src = res[i].image;
+
+      // add stats
+      let stars = document.createElement('p');
+      stars.textContent = "Starring: " + res[i].starring;
+      let released = document.createElement('p');
+      released.textContent = "Release Date: " + res[i].released;
+      let blurb = document.createElement('p');
+      blurb.textContent = "Bella's Blurb: " + res[i].blurb;
+      let synop = document.createElement('p');
+      synop.textContent = "Synopsis: " + res[i].synopsis;
 
       display.appendChild(titlep);
-      display.appendChild(linkp);
+      display.appendChild(img);
+      display.appendChild(stars);
+      display.appendChild(released);
+      display.appendChild(blurb);
+      display.appendChild(synop);
+
     }
   }
 

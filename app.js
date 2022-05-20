@@ -3,7 +3,7 @@
 const express = require('express');
 const app = express();
 
-let genres = ['romance', 'comedy', 'action', 'family', 'horror'];
+let genres = ['romance', 'comedy', 'action', 'family', 'horror', 'bellasfaves'];
 let romance = [
   {
     'title': 'The Notebook',
@@ -36,8 +36,8 @@ let comedy = [
     'starring': 'Dwayne Johnson, Jack Black, Kevin Hart, Karen Gillan',
     'released': '2017',
     'blurb': 'Okay, I know this is technically an action movie, but it is just too funny. I mean, Dwayne Johnson, Jack Black, and Kevin Hart interacting with each other for 2 hours? Sign me up. And if you don’t feel like watching the whole movie, just skip to, like, 47:00.',
-    'synopsis': 'Four high school kids discover an old video game console and are drawn into the game's jungle setting, literally becoming the adult avatars they chose. What they discover is that you don't just play Jumanji - you must survive it. To beat the game and return to the real world, they\'ll have to go on the most dangerous adventure of their lives, discover what Alan Parrish left 20 years ago, and change the way they think about themselves - or they\'ll be stuck in the game forever.',
-    'image': ''
+    'synopsis': 'Four high school kids discover an old video game console and are drawn into the game’s jungle setting, literally becoming the adult avatars they chose. What they discover is that you don’t just play Jumanji - you must survive it. To beat the game and return to the real world, they\'ll have to go on the most dangerous adventure of their lives, discover what Alan Parrish left 20 years ago, and change the way they think about themselves - or they\'ll be stuck in the game forever.',
+    'image': 'jumanji.jpg'
   }
   // },
   // {
@@ -64,7 +64,7 @@ let action = [
     'released': '1996-2018',
     'blurb': 'These are all great. Had me super engaged the whole time. My family had a week where we just watched one Mission Impossible movie every night. There’s a ton of action (obviously — that’s why it’s in this category), plot twists, awesome directing, and also Tom Cruise is hot.',
     'synopsis': 'Synopsis: The films follow the missions of the IMF’s (Impossible Missions Force) main field team under the leadership of Ethan Hunt to stop an enemy force all the while preventing an impending global disaster.',
-    'image': 'jumanji.jpg'
+    'image': ''
   },
   {
     'title': 'Now You See Me',
@@ -99,7 +99,7 @@ let family = [
     'released': '2019',
     'blurb': 'This is probably a controversial opinion, but this one is better than the original (don’t @ me). I mean, the cinematics, and the songs, and the characters (I mean, I know the characters are the same, but, like, they’re not). I love what they did with it, and I will never get tired of this movie. Yes, I have “Speechless” on my Spotify playlist.',
     'synopsis': 'Aladdin is a lovable street urchin who meets Princess Jasmine, the beautiful daughter of the sultan of Agrabah. While visiting her exotic palace, Aladdin stumbles upon a magic oil lamp that unleashes a powerful, wisecracking, larger-than-life genie. As Aladdin and the genie start to become friends, they must soon embark on a dangerous mission to stop the evil sorcerer, Jafar, from overthrowing young Jasmine’s kingdom.',
-    'image': 'aladdin'
+    'image': 'aladdin.jpg'
   },
   {
     'title': 'Tangled',
@@ -107,39 +107,39 @@ let family = [
     'released': '2010',
     'blurb': 'One of my favorite Disney princess movies. Again, the songs are great. It’s also just such a wholesome movie — girl sees world for the first time, is excited about everything, you know. I also love the innocent-girl-meets-rebellious-boy trope.',
     'synopsis': 'Disney animation of a classic tale. Beautiful princess Rapunzel has been locked away in a tower since she was captured as a baby by an old hag. Her magical long blonde hair has the power to provide eternal youth, and the evil Gothel uses this power to keep her young. At the age of 18, Rapunzel becomes curious about the outside world, and when a prince uses her tower as a refuge, she asks him to help her escape.',
-    'image': 'tangled'
-  }
-];
-let bellasfaves = [
-    {
-    'title': 'Mamma Mia! Here We Go Again',
-    'starring': 'Lily James, Amanda Seyfried, Meryl Streep',
-    'released': '2018',
-    'blurb': 'My literal comfort movie. Obviously the songs are great (I think the first movie may still win, though). The casting is perfection. The movie just inspires me to go see the world and be a free spirit. And the way it wraps up is just so clean, no loose ends *chef’s kiss*',
-    'synopsis': 'In 1979 young Donna, Tanya and Rosie graduate from Oxford University -- leaving Donna free to embark on a series of adventures throughout Europe. On her journeys, she makes the acquaintances of Harry, Bill and Sam -- the latter whom she falls in love with, but he’s also the man who breaks her heart. In the present day, Donna’s pregnant daughter, Sophie, dreams of renovating a taverna while reuniting with her mothers old friends and boyfriends on the Greek island of Kalokairi.',
-    'image': 'mammamia.jpg'
-  },
-    {
-    'title': 'Charlie’s Angels',
-    'starring': 'Kristen Stewart, Ella Balinska, Naomi Scott, Elizabeth Banks, Patrick Stewart',
-    'released': '2019',
-    'blurb': 'Just a bunch of women being badass. Love that. They’re just so cool, I don’t know what else to say. I am also in love with the entire cast. Go watch it.',
-    'synopsis': 'Elena Houghlin is a scientist, engineer and inventor of Calisto -- a sustainable energy source that will revolutionize the way people use power. But when the cutting edge technology falls into the wrong hands, Elena turns to the Townsend Agency for help. Now, it‘s up to the Angels -- Jane, Sabina and the newly recruited Elena -- to retrieve Calisto before it can be transformed into a weapon of mass destruction.',
-    'image': 'angels.jpg'
-  },
-    {
-    'title': 'The Harry Potter Movies',
-    'starring': 'Daniel Radcliff, Emma Watson, Rupert Grint',
-    'released': '2001-2011',
-    'blurb': 'I grew up on Harry Potter. I started reading the books in second grade, and have read the series three times since then. I don’t even know how many times I’ve seen the movies but it’s A LOT. I was really bummed when I turned 12 and didn’t get my letter :( Anyways, if you haven’t seen these or don’t like these, we cannot be friends. If you do like these, wyd Friday night? Let’s make butterbeer and have a movie marathon.',
-    'synopsis': 'The main story arc concerns Harry’s struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic and subjugate all wizards and Muggles (non-magical people).',
-    'image': 'harrypotter.jpg'
+    'image': 'tangled.jpg'
   }
 ];
 let horror = [
   {
     'title': 'Only Someone Who Passed The 5th Grade With Flying Colors Can Ace This Simple Trivia Quiz',
     'link': 'https://www.buzzfeed.com/lorelaisrory/can-you-pass-this-fifth-grade-trivia-quiz'
+  }
+];
+let bellasfaves = [
+  {
+  'title': 'Mamma Mia! Here We Go Again',
+  'starring': 'Lily James, Amanda Seyfried, Meryl Streep',
+  'released': '2018',
+  'blurb': 'My literal comfort movie. Obviously the songs are great (I think the first movie may still win, though). The casting is perfection. The movie just inspires me to go see the world and be a free spirit. And the way it wraps up is just so clean, no loose ends *chef’s kiss*',
+  'synopsis': 'In 1979 young Donna, Tanya and Rosie graduate from Oxford University -- leaving Donna free to embark on a series of adventures throughout Europe. On her journeys, she makes the acquaintances of Harry, Bill and Sam -- the latter whom she falls in love with, but he’s also the man who breaks her heart. In the present day, Donna’s pregnant daughter, Sophie, dreams of renovating a taverna while reuniting with her mothers old friends and boyfriends on the Greek island of Kalokairi.',
+  'image': 'mammamia.jpg'
+  },
+  {
+  'title': 'Charlie’s Angels',
+  'starring': 'Kristen Stewart, Ella Balinska, Naomi Scott, Elizabeth Banks, Patrick Stewart',
+  'released': '2019',
+  'blurb': 'Just a bunch of women being badass. Love that. They’re just so cool, I don’t know what else to say. I am also in love with the entire cast. Go watch it.',
+  'synopsis': 'Elena Houghlin is a scientist, engineer and inventor of Calisto -- a sustainable energy source that will revolutionize the way people use power. But when the cutting edge technology falls into the wrong hands, Elena turns to the Townsend Agency for help. Now, it‘s up to the Angels -- Jane, Sabina and the newly recruited Elena -- to retrieve Calisto before it can be transformed into a weapon of mass destruction.',
+  'image': 'angels.jpg'
+  },
+  {
+  'title': 'The Harry Potter Movies',
+  'starring': 'Daniel Radcliff, Emma Watson, Rupert Grint',
+  'released': '2001-2011',
+  'blurb': 'I grew up on Harry Potter. I started reading the books in second grade, and have read the series three times since then. I don’t even know how many times I’ve seen the movies but it’s A LOT. I was really bummed when I turned 12 and didn’t get my letter :( Anyways, if you haven’t seen these or don’t like these, we cannot be friends. If you do like these, wyd Friday night? Let’s make butterbeer and have a movie marathon.',
+  'synopsis': 'The main story arc concerns Harry’s struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic and subjugate all wizards and Muggles (non-magical people).',
+  'image': 'harrypotter.jpg'
   }
 ];
 
@@ -153,7 +153,8 @@ app.get('/movies/list/:genre', function (req, res) {
     req.params['genre'] === 'comedy' ||
     req.params['genre'] === 'action' ||
     req.params['genre'] === 'family' ||
-    req.params['genre'] === 'horror') {
+    req.params['genre'] === 'horror' ||
+    req.params['genre'] === 'bellasfaves') {
     res.json(getQuizzes(req.params['genre']));
   } else {
     res.status(400).json({'error': 'no category listed for ' + req.params['genre']});
@@ -174,11 +175,13 @@ function getQuizzes(genre) {
   } else if (genre === 'comedy') {
     return comedy;
   } else if (genre === 'action') {
-  return action;
+    return action;
   } else if (genre === 'family') {
-  return family;
+    return family;
   } else if (genre === 'horror') {
-  return horror;
+    return horror;
+  } else if (genre === 'bellafaves') {
+    return bellasfaves;
   }
 }
 
