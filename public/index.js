@@ -113,15 +113,15 @@
     }
   }
 
-    /**
-    * Checks the success of the fetch call
-    * @param {object} res status for the fetch call (200 = ok, 404 = not found, etc.)
-    */
-    async function statusCheck(res) {
-      if (!res.ok) {
-        throw new Error(await res.text());
-      }
-      return res;
+  /**
+   * Checks the success of the fetch call
+   * @param {object} res status for the fetch call (200 = ok, 404 = not found, etc.)
+   */
+  async function statusCheck(res) {
+    if (!res.ok) {
+      throw new Error(await res.text());
     }
+    return res;
+  }
 
 })();

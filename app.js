@@ -268,7 +268,7 @@ function getQuizzes(genre) {
     return bellasfaves;
   }
 }
-
+const PORTNUM = 8000;
 app.use(express.static('public'));
-const PORT = 8000 || process.env.PORT;
+const PORT = process.env.PORT || PORTNUM;
 app.listen(PORT);
