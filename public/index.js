@@ -47,7 +47,7 @@
     let para = document.createElement('p');
     para.textContent = res;
     para.classList.add('title');
-    display.appendChild(p);
+    display.appendChild(para);
 
     // keep footer at the bottom
     let foot = document.querySelector('footer');
