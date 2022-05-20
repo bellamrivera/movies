@@ -1,3 +1,13 @@
+/**
+ * Bella Rivera
+ * May 20, 2022
+ * CSE154 Section AH
+ * This is the API for my CP4 website. It contains all of the movies and details. It also
+ * defines the request endpoints.
+ * NOTE: All synopsis, casting, and release date information are from Google Search Engine
+ * and Wikipedia
+ */
+
 'use strict';
 
 const express = require('express');
@@ -18,6 +28,8 @@ let romance = [
       'love affair. In the interim, Allie becomes involved with another man (James Marsden). ' +
       'But when Noah returns to their small town years later, on the cusp of Allie\'s marriage, ' +
       'it soon becomes clear that their romance is anything but over.',
+
+    // https://m.media-amazon.com/images/M/MV5BMTk3OTM5Njg5M15BMl5BanBnXkFtZTYwMzA0ODI3._V1_.jpg
     'image': 'notebook.jpg'
   },
   {
@@ -258,7 +270,7 @@ app.get('/movies/list/:genre', function(req, res) {
 /**
  * Returns the list of movies, based on the genre selected
  * @param {String} genre the selected movie genre
- * @returns JSON object containing movies and details
+ * @returns {JSON} JSON object containing movies and details
  */
 function getMovies(genre) {
   if (genre === 'romance') {

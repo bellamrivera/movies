@@ -1,7 +1,19 @@
+/**
+ * Bella Rivera
+ * May 20, 2022
+ * CSE154 Section AH
+ * This is the javascript file for my CP4 website. It defines all of the client-side
+ * functionality. It makes requests to my API based on the genre button that the user clicks
+ * and dynamically displays those results (AKA the movies from that genre and their
+ * details) on the page.
+ */
 "use strict";
 (function() {
   window.addEventListener("load", init);
 
+  /**
+   * Initializes the window. Makes sure all the buttons are clickable.
+   */
   function init() {
     // initialize stuff
     let btns = document.querySelectorAll('button');

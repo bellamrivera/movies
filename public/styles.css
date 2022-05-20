@@ -1,10 +1,12 @@
 /* Bella Rivera
-  May 5, 2022
+  May 20, 2022
   CSE154 Section AH
 
-  This is the styling page for my CP3 website. This gives the webpage a coherent
-  theme, makes the buttons look nicer, and defines how the chosen activity will
-  be displayed. */
+  This is the styling page for my CP4 website. This gives the webpage a coherent
+  theme, makes the buttons look nicer, and defines how the movies will
+  be displayed. It assigns the colors and any classes that will be dynamically
+  added in the javascript
+  */
 
 body {
   background-color: #BDBDBD;
