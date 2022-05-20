@@ -24,6 +24,10 @@ h1 {
   margin: 10px;
 }
 
+.title {
+  font-size: 42px;
+}
+
 main > section + section, #button_section, header {
   display: flex;
 }
@@ -42,8 +46,20 @@ header p {
   font-size: 20px;
 }
 
+#intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+#intro p {
+  padding-top: 20px;
+  width: 70%;
+}
+
 p {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 img {
@@ -68,7 +84,25 @@ img {
 .display {
   width: 50%;
   margin-top: 100px;
-  border: 4px solid white;
+  /* border: 4px solid white; */
+  background-color: white;
+  box-shadow: 10px 10px #888888;
+}
+
+.left {
+  text-align: left;
+  padding-left: 100px;
+  padding-right: 70px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.center {
+  text-align: center;
+}
+
+.bold {
+  color: red;
 }
 
 button {
@@ -79,6 +113,30 @@ button {
   height: 50px;
   width: 100px;
   border: none;
+}
+
+.pink {
+  background-color: #FFEEFB;
+}
+
+.peach {
+  background-color: #FFEFE3;
+}
+
+.yellow {
+  background-color: #FFFDDC;
+}
+
+.green {
+  background-color: #EEFFE2;
+}
+
+.blue {
+  background-color: #E2F9FF;
+}
+
+.purple {
+  background-color: #EFE8FF;
 }
 
 footer p {

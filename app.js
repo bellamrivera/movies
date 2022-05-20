@@ -64,7 +64,7 @@ let action = [
     'released': '1996-2018',
     'blurb': 'These are all great. Had me super engaged the whole time. My family had a week where we just watched one Mission Impossible movie every night. There’s a ton of action (obviously — that’s why it’s in this category), plot twists, awesome directing, and also Tom Cruise is hot.',
     'synopsis': 'Synopsis: The films follow the missions of the IMF’s (Impossible Missions Force) main field team under the leadership of Ethan Hunt to stop an enemy force all the while preventing an impending global disaster.',
-    'image': ''
+    'image': 'impossible.jpg'
   },
   {
     'title': 'Now You See Me',
