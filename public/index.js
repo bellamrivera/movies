@@ -11,6 +11,9 @@
     }
   }
 
+  /**
+   * Registers the category that the user clicks and calls the appropriate fetch
+   */
   function getCategory() {
     let btnId = this.id;
     let url;
@@ -35,6 +38,12 @@
     }
   }
 
+  /**
+   * If the user clicks the horror button, displays the text that is returned from the fetch
+   * @param {Object} res the results of the fetch
+   * @param {*} btnId the id of the button that was clicked (so that we can match the
+   * color of the display to the color of the button)
+   */
   function displayHorror(res, btnId) {
     let color = document.getElementById(btnId).classList[0];
     let display = document.querySelector('.display');
@@ -53,6 +62,13 @@
     foot.classList.add('abs');
   }
 
+  /**
+   * If the user clicks any button other than horror, displays a list of movies and
+   * details, based on the results of the fetch call
+   * @param {Object} res the results of the fetch
+   * @param {*} btnId the id of the button that was clicked (so that we can match the
+   * color of the display to the color of the button)
+   */
   function displayOptions(res, btnId) {
     let color = document.getElementById(btnId).classList[0];
     let display = document.querySelector('.display');
@@ -70,6 +86,12 @@
     foot.classList.remove('abs');
   }
 
+  /**
+   * Appends the specific details such as title, image, release date, cast, etc.
+   * @param {Object} display the HTML div element that we will be appending to
+   * @param {Object} res the results of the fetch
+   * @param {Integer} i the index that we want to look in the results
+   */
   function addDetails(display, res, i) {
     // add title
     let title = res[i].title;
@@ -101,6 +123,12 @@
     stats.appendChild(synop);
   }
 
+  /**
+   * Adds the images to each movie — helper method
+   * @param {Object} display the HTML div element that we will be appending to
+   * @param {Object} res the results of the fetch
+   * @param {Integer} i the index that we want to look in the results
+   */
   function addImage(display, res, i) {
     // add image
     let img = document.createElement('img');

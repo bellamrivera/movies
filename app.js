@@ -248,14 +248,19 @@ app.get('/movies/list/:genre', function(req, res) {
     req.params['genre'] === 'action' ||
     req.params['genre'] === 'family' ||
     req.params['genre'] === 'bellasfaves') {
-    res.json(getQuizzes(req.params['genre']));
+    res.json(getMovies(req.params['genre']));
   } else {
     const STATUS = 400;
     res.status(STATUS).json({'error': 'no category listed for ' + req.params['genre']});
   }
 });
 
-function getQuizzes(genre) {
+/**
+ * Returns the list of movies, based on the genre selected
+ * @param {String} genre the selected movie genre
+ * @returns JSON object containing movies and details
+ */
+function getMovies(genre) {
   if (genre === 'romance') {
     return romance;
   } else if (genre === 'comedy') {
