@@ -270,5 +270,5 @@ function getQuizzes(genre) {
 }
 
 app.use(express.static('public'));
-const PORT = process.env.PORT || 8000;
+const PORT = 8000 || process.env.PORT;
 app.listen(PORT);

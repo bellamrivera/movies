@@ -20,9 +20,9 @@
         .then(statusCheck)
         .then(res => res.text())
         .then((res) => {
-        displayHorror(res, btnId);
-      })
-      .catch(console.error);
+          displayHorror(res, btnId);
+        })
+        .catch(console.error);
     } else {
       url = '/movies/list/' + btnId;
       fetch(url)
@@ -62,17 +62,12 @@
     display.classList.add(color);
 
     for (let i = 0; i < res.length; i++) {
-      if (res[i].image === 'impossible.jpg' || res[i].image === 'harrypotter.jpg'||
-        res[i].image === 'soul.jpg') {
-          img.classList.add('wide');
-        }
-
       addDetails(display, res, i);
-
-      // change footer position so it stays at the bottom
-      let foot = document.querySelector('footer');
-      foot.classList.remove('abs');
     }
+
+    // change footer position so it stays at the bottom
+    let foot = document.querySelector('footer');
+    foot.classList.remove('abs');
   }
 
   function addDetails(display, res, i) {
@@ -84,10 +79,7 @@
     titlep.classList.add('title');
     display.appendChild(titlep);
 
-    // add image
-    let img = document.createElement('img');
-    img.src = res[i].image;
-    display.appendChild(img);
+    addImage(display, res, i);
 
     // add stats
     let stars = document.createElement('p');
@@ -107,6 +99,18 @@
     stats.appendChild(released);
     stats.appendChild(blurb);
     stats.appendChild(synop);
+  }
+
+  function addImage(display, res, i) {
+    // add image
+    let img = document.createElement('img');
+    img.src = res[i].image;
+    display.appendChild(img);
+
+    if (res[i].image === 'impossible.jpg' || res[i].image === 'harrypotter.jpg' ||
+      res[i].image === 'soul.jpg') {
+      img.classList.add('wide');
+    }
   }
 
     /**
