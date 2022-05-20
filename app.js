@@ -9,7 +9,7 @@ let romance = [
     'title': 'The Notebook',
     'starring': 'Ryan Gosling, Rachel McAdams',
     'released': '2004',
-    'blurb': 'This one’s a classic. When someone says romance movie, you think “The Notebook”. It’s a must-watch simply because you can’t walk through life not having seen this movie. Stay up to date, so that when people reference it, you won’t have to deal with them going, “*gasp* You haven’t seen it?”',
+    'blurb': 'This one’s a classic. When someone says "romance movie", you think “The Notebook”. It’s a must-watch simply because you can’t go through life not having seen this movie. Stay up to date, so that when people reference it, you won’t have to deal with them going, “*gasp* You haven’t seen it?”',
     'synopsis': 'In 1940s South Carolina, mill worker Noah Calhoun (Ryan Gosling) and rich girl Allie (Rachel McAdams) are desperately in love. But her parents don\'t approve. When Noah goes off to serve in World War II, it seems to mark the end of their love affair. In the interim, Allie becomes involved with another man (James Marsden). But when Noah returns to their small town years later, on the cusp of Allie\'s marriage, it soon becomes clear that their romance is anything but over.',
     'image': 'notebook.jpg'
   },
@@ -38,24 +38,23 @@ let comedy = [
     'blurb': 'Okay, I know this is technically an action movie, but it is just too funny. I mean, Dwayne Johnson, Jack Black, and Kevin Hart interacting with each other for 2 hours? Sign me up. And if you don’t feel like watching the whole movie, just skip to, like, 47:00.',
     'synopsis': 'Four high school kids discover an old video game console and are drawn into the game’s jungle setting, literally becoming the adult avatars they chose. What they discover is that you don’t just play Jumanji - you must survive it. To beat the game and return to the real world, they\'ll have to go on the most dangerous adventure of their lives, discover what Alan Parrish left 20 years ago, and change the way they think about themselves - or they\'ll be stuck in the game forever.',
     'image': 'jumanji.jpg'
+  },
+  {
+    'title': 'Meet the Parents',
+    'starring': 'Ben Stiller, Robert De Niro',
+    'released': '2000',
+    'blurb': 'This movie made me cringe so many times, but that’s the beauty of it. It’s kind of like The Office in the sense that it makes you want to fast forward through the whole thing but you also just can’t look away. Also, if you\'re in a serious relationship, and you\'re going to meet your partner\'s parents soon, watch this and take notes of what NOT to do.',
+    'synopsis': 'A young man\'s first visit to his girlfriend\'s parents\' house turns out to be more nightmarish than he could ever have imagined. Hoping to use the weekend as a chance to propose to his girlfriend, he only succeeds in incurring the wrath of his prospective father-in-law and almost destroys their home in the process.',
+    'image': 'parents.jpg'
+  },
+  {
+    'title': 'Pineapple Express',
+    'starring': 'Seth Rogan, James Franco',
+    'released': '2008',
+    'blurb': 'Just the plot itself lends to some super funny moments. I mean, two stoners accidentally witnessing a murder, and now having criminals chasing after them? Gold. Even the trailer is funny, so if you\'re not sure if you want to watch this, try the trailer first. If you somehow don\'t enjoy the trailer... double check that you clicked the right movie.',
+    'synopsis': 'Stoner Dale Denton\'s (Seth Rogen) enjoyment of a rare strain of marijuana may prove fatal when he drops his roach in a panic after witnessing a murder. Upon learning that the fancy weed can be traced back to them, Dale and his dealer (James Franco) go on the lam, with a dangerous drug lord (Gary Cole) and crooked cop (Rosie Perez) hot on their heels.',
+    'image': 'pineapple.jpg'
   }
-  // },
-  // {
-  //   'title':
-  //   'starring':
-  //   'released':
-  //   'blurb':
-  //   'synopsis':
-  //   'image':
-  // },
-  // {
-  //   'title':
-  //   'starring':
-  //   'released':
-  //   'blurb':
-  //   'synopsis':
-  //   'image':
-  // }
 ];
 let action = [
   {
@@ -73,23 +72,22 @@ let action = [
     'blurb': 'I struggled to choose between this and Oceans 11. I love a good heist. I ended up going with this one because it’s a little less mainstream. I mean a bunch of magicians trying to break into a bank? C’mon, now you gotta watch it just out of sheer curiosity.',
     'synopsis': 'Charismatic magician Atlas (Jesse Eisenberg) leads a team of talented illusionists called the Four Horsemen. Atlas and his comrades mesmerize audiences with a pair of amazing magic shows that drain the bank accounts of the corrupt and funnel the money to audience members. A federal agent (Mark Ruffalo) and an Interpol detective (Mélanie Laurent) intend to rein in the Horsemen before their next caper, and they turn to Thaddeus (Morgan Freeman), a famous debunker, for help.',
     'image': 'nysm.jpg'
+  },
+  {
+    'title': 'Black Panther',
+    'starring': 'Chadwick Boseman, Michael B. Jordan, Lupita Nyong\'o, Letitia Wright',
+    'released': '2018',
+    'blurb': 'Of course I had to throw a Marvel movie in here. And this is an iconic one. Every little detail of this movie is great: the cinematography, the costume design, the choreography of the fight scenes, everything. If you haven\'t watched this already, ignore the rest of the list and play this right now. RIP to the legend Chadwick Boseman <3',
+    'synopsis': 'After the death of his father, T\'Challa returns home to the African nation of Wakanda to take his rightful place as king. When a powerful enemy suddenly reappears, T\'Challa\'s mettle as king -- and as Black Panther -- gets tested when he\'s drawn into a conflict that puts the fate of Wakanda and the entire world at risk. Faced with treachery and danger, the young king must rally his allies and release the full power of Black Panther to defeat his foes and secure the safety of his people.',
+    'image': 'panther.jpg'
   }
-  // },
-  // {
-  //   'title':
-  //   'starring':
-  //   'released':
-  //   'blurb':
-  //   'synopsis':
-  //   'image':
-  // }
 ];
 let family = [
   {
     'title': 'Soul',
     'starring': 'Jamie Foxx, Tina Fey',
     'released': '2020',
-    'blurb': 'If you’re looking for a little bit of an inspirational film, here it is. I also love this, though, because it’s got some cool deeper existential layers to it, which really make you think. Also, the little souls are so cute.',
+    'blurb': 'If you’re looking for a little bit of an inspirational film, here it is. I also love this because it’s got some cool deeper existential layers to it, which really make you think. Also, the little souls are so cute.',
     'synopsis': 'Joe is a middle-school band teacher whose life hasnt quite gone the way he expected. His true passion is jazz -- and he’s good. But when he travels to another realm to help someone find their passion, he soon discovers what it means to have soul.',
     'image': 'soul.jpg'
   },
