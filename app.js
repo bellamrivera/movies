@@ -1,9 +1,8 @@
-'use strict'
+'use strict';
 
 const express = require('express');
 const app = express();
 
-let genres = ['romance', 'comedy', 'action', 'family', 'horror', 'bellasfaves'];
 let romance = [
   {
     'title': 'The Notebook',
@@ -239,8 +238,8 @@ let bellasfaves = [
 
 app.get('/movies/horror', function(req, res) {
   res.type('text');
-  res.send("Absolutely not. Horror movies suck. I don’t recommend any of them. "
-    + "Go pick a different category.");
+  res.send("Absolutely not. Horror movies suck. I don’t recommend any of them. " +
+    "Go pick a different category.");
 });
 
 app.get('/movies/list/:genre', function(req, res) {
@@ -251,7 +250,8 @@ app.get('/movies/list/:genre', function(req, res) {
     req.params['genre'] === 'bellasfaves') {
     res.json(getQuizzes(req.params['genre']));
   } else {
-    res.status(400).json({'error': 'no category listed for ' + req.params['genre']});
+    const STATUS = 400;
+    res.status(STATUS).json({'error': 'no category listed for ' + req.params['genre']});
   }
 });
 

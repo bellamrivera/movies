@@ -17,22 +17,21 @@
     if (btnId === 'horror') {
       url = '/movies/horror';
       fetch(url)
-      .then(statusCheck)
-      .then(res => res.text())
-      // .then(console.log)
-      .then((res) => {
+        .then(statusCheck)
+        .then(res => res.text())
+        .then((res) => {
         displayHorror(res, btnId);
       })
       .catch(console.error);
     } else {
       url = '/movies/list/' + btnId;
       fetch(url)
-      .then(statusCheck)
-      .then(res => res.json())
-      .then((res) => {
-        displayOptions(res, btnId);
-      })
-      .catch(console.error);
+        .then(statusCheck)
+        .then(res => res.json())
+        .then((res) => {
+          displayOptions(res, btnId);
+        })
+        .catch(console.error);
     }
   }
 
@@ -63,49 +62,51 @@
     display.classList.add(color);
 
     for (let i = 0; i < res.length; i++) {
-
-      // add title
-      let title = res[i].title;
-      let titlep = document.createElement('p');
-      display.appendChild(titlep);
-      titlep.textContent = title;
-      titlep.classList.add('title');
-
-      // add image
-      let img = document.createElement('img');
-      img.src = res[i].image;
-
-      if (res[i].image === 'impossible.jpg' || res[i].image === 'harrypotter.jpg'
-        || res[i].image === 'soul.jpg') {
+      if (res[i].image === 'impossible.jpg' || res[i].image === 'harrypotter.jpg'||
+        res[i].image === 'soul.jpg') {
           img.classList.add('wide');
         }
 
-      // add stats
-      let stars = document.createElement('p');
-      stars.textContent = "STARRING: " + res[i].starring;
-      let released = document.createElement('p');
-      released.textContent = "RELEASE DATE: " + res[i].released;
-      let blurb = document.createElement('p');
-      blurb.textContent = "BELLA'S BLURB: " + res[i].blurb;
-      let synop = document.createElement('p');
-      synop.textContent = "SYNOPSIS: " + res[i].synopsis;
-
-      display.appendChild(titlep);
-      display.appendChild(img);
-
-      let stats = document.createElement('section');
-      stats.classList.add('left');
-      display.appendChild(stats);
-
-      stats.appendChild(stars);
-      stats.appendChild(released);
-      stats.appendChild(blurb);
-      stats.appendChild(synop);
+      addDetails(display, res, i);
 
       // change footer position so it stays at the bottom
       let foot = document.querySelector('footer');
       foot.classList.remove('abs');
     }
+  }
+
+  function addDetails(display, res, i) {
+    // add title
+    let title = res[i].title;
+    let titlep = document.createElement('p');
+    display.appendChild(titlep);
+    titlep.textContent = title;
+    titlep.classList.add('title');
+    display.appendChild(titlep);
+
+    // add image
+    let img = document.createElement('img');
+    img.src = res[i].image;
+    display.appendChild(img);
+
+    // add stats
+    let stars = document.createElement('p');
+    stars.textContent = "STARRING: " + res[i].starring;
+    let released = document.createElement('p');
+    released.textContent = "RELEASE DATE: " + res[i].released;
+    let blurb = document.createElement('p');
+    blurb.textContent = "BELLA'S BLURB: " + res[i].blurb;
+    let synop = document.createElement('p');
+    synop.textContent = "SYNOPSIS: " + res[i].synopsis;
+
+    let stats = document.createElement('section');
+    stats.classList.add('left');
+    display.appendChild(stats);
+
+    stats.appendChild(stars);
+    stats.appendChild(released);
+    stats.appendChild(blurb);
+    stats.appendChild(synop);
   }
 
     /**
